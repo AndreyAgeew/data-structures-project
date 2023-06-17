@@ -13,6 +13,7 @@ if __name__ == '__main__':
     stack.push('data2')
     stack.push('data3')
     print(stack.top.data)  # data3
+    print(stack)
     print(stack.top.next_node.data)  # data2
     print(stack.top.next_node.next_node.data)  # data1
     print(stack.top.next_node.next_node.next_node)  # None
