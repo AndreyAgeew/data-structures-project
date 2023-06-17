@@ -1,29 +1,14 @@
 from typing import Any, Optional
 
-from typing import Any, Optional
+from src.stack import Node
 
 
-class Node:
-    """Класс для узла очереди"""
-
-    def __init__(self, data: Any, next_node: Optional['Node'] = None):
-        """
-        Конструктор класса Node
-
-        :param data: данные, которые будут храниться в узле
-        :type data: Any
-        :param next_node: ссылка на следующий узел в стеке (по умолчанию: None)
-        :type next_node: Optional[Node]
-        """
-        self.data = data
-        self.next_node = next_node
-
-
-class Queue:
+class Queue(Node):
     """Класс для очереди"""
 
     def __init__(self):
         """Конструктор класса Queue"""
+        super().__init__(None)
         self.head: Optional[Node] = None
         self.tail: Optional[Node] = None
 
